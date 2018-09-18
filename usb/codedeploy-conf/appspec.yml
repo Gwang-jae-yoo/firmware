@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+ - source:  /
+   destination: /home/ec2-user/usb-firmware-deploy
+
+permissions:
+ - object: /
+   pattern: "**"
+   mode : 777
+   owner: pntadmin
+   group: pntadmin
+
+hooks:
+ AfterInstall:
+  - location: deploy.sh
+    timeout: 60
+    runas: ec2-user
