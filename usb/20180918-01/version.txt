@@ -1,0 +1,5 @@
+firmware version : 99
+netFirmware version : 100
+
+firmware checksum : 99
+netFirmware checksum : 100
