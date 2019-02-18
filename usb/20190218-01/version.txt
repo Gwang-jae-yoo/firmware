@@ -1,0 +1,5 @@
+firmware version : 2.10
+netFirmware version : 2.13
+
+firmware checksum : 40
+netFirmware checksum : 131
