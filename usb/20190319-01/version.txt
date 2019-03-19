@@ -1,4 +1,4 @@
-firmware version : 3.02
+firmware version : 3.03
 netFirmware version : 3.03
 
 firmware checksum : 172
