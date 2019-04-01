@@ -1,0 +1,5 @@
+firmware version : 3.04
+netFirmware version: 3.06
+
+firmware checksum : 212
+netFirmware checksum : 249
