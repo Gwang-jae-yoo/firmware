@@ -1,0 +1,36 @@
+사설인증키로 2038년까지 사용가능
+
+
+0. 버전 체크
+  openssl version
+  openssl-1.0.2k-8.el7.x86_64
+
+1. 개인키 생성 (패스워드 : pntbiz1q2w3e)
+  openssl genrsa -des3 -out server.key 2048
+
+2. 인증요청서 생성
+  openssl req -new -key server.key -out server.csr
+
+  CN = pntbiz.com
+  OU = PNT
+  O = PNT
+  L = Gangnam-gu
+  S = Seoul
+  C = KR
+
+3. 개인키에서 패스워드 제거
+  cp server.key server.key.origin
+  openssl rsa -in server.key.origin -out key.pem
+
+4. 인증서 생성 (서버용)
+  openssl x509 -req -days 7300 -in server.csr -signkey key.pem -out cert.pem
+
+5. 클라이언트용
+  openssl x509 -outform der -in cert.pem -out client.crt
+
+
+- 파일 정리 : 
+
+클라이언트용 (USB 스캐너/AP8 허브용) 파일 : client.crt
+서버에 설치할 파일 : cert.pem
+키 파일 : key.pem
