@@ -1,5 +1,5 @@
 firmware version : 3.09
-netFirmware version: 3.11
+netFirmware version: 3.12
 
 firmware checksum : 21
 netFirmware checksum : 8
