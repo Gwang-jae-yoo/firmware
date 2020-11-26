@@ -1,0 +1,5 @@
+firmware version : 3.11
+netFirmware version: 3.18
+
+firmware checksum : 25
+netFirmware checksum : 105
