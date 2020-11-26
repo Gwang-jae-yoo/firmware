@@ -1,14 +1,14 @@
-»ç¼³ÀÎÁõÅ°·Î 2038³â±îÁö »ç¿ë°¡´É
+ì‚¬ì„¤ì¸ì¦í‚¤ë¡œ 2038ë…„ê¹Œì§€ ì‚¬ìš©ê°€ëŠ¥
 
 
-0. ¹öÀü Ã¼Å©
+0. ë²„ì „ ì²´í¬
   openssl version
   openssl-1.0.2k-8.el7.x86_64
 
-1. °³ÀÎÅ° »ı¼º (ÆĞ½º¿öµå : pntbiz1q2w3e)
+1. ê°œì¸í‚¤ ìƒì„± (íŒ¨ìŠ¤ì›Œë“œ : pntbiz1q2w3e)
   openssl genrsa -des3 -out server.key 2048
 
-2. ÀÎÁõ¿äÃ»¼­ »ı¼º
+2. ì¸ì¦ìš”ì²­ì„œ ìƒì„±
   openssl req -new -key server.key -out server.csr
 
   CN = pntbiz.com
@@ -18,19 +18,19 @@
   S = Seoul
   C = KR
 
-3. °³ÀÎÅ°¿¡¼­ ÆĞ½º¿öµå Á¦°Å
+3. ê°œì¸í‚¤ì—ì„œ íŒ¨ìŠ¤ì›Œë“œ ì œê±°
   cp server.key server.key.origin
   openssl rsa -in server.key.origin -out key.pem
 
-4. ÀÎÁõ¼­ »ı¼º (¼­¹ö¿ë)
+4. ì¸ì¦ì„œ ìƒì„± (ì„œë²„ìš©)
   openssl x509 -req -days 7300 -in server.csr -signkey key.pem -out cert.pem
 
-5. Å¬¶óÀÌ¾ğÆ®¿ë
+5. í´ë¼ì´ì–¸íŠ¸ìš©
   openssl x509 -outform der -in cert.pem -out client.crt
 
 
-- ÆÄÀÏ Á¤¸® : 
+- íŒŒì¼ ì •ë¦¬ : 
 
-Å¬¶óÀÌ¾ğÆ®¿ë (USB ½ºÄ³³Ê/AP8 Çãºê¿ë) ÆÄÀÏ : client.crt
-¼­¹ö¿¡ ¼³Ä¡ÇÒ ÆÄÀÏ : cert.pem
-Å° ÆÄÀÏ : key.pem
+í´ë¼ì´ì–¸íŠ¸ìš© (USB ìŠ¤ìºë„ˆ/AP8 í—ˆë¸Œìš©) ì¸ì¦ì„œ íŒŒì¼ : client.crt
+ì„œë²„ì— ì„¤ì¹˜í•  ì¸ì¦ì„œ íŒŒì¼ : cert.pem
+ì„œë²„ì— ì„¤ì¹˜í•  í‚¤ íŒŒì¼ : key.pem
