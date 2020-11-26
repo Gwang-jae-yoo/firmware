@@ -31,7 +31,7 @@
 
 - 파일 정리 : 
 
-클라이언트용 (USB 스캐너/AP8 허브용) 인증서 파일 : client.crt
+클라이언트용 (USB 스캐너/AP8 허브용) 인증서 파일 : client.crt  (checksum : 199)
 서버에 설치할 인증서 파일 : cert.pem
 서버에 설치할 키 파일 : key.pem
 
