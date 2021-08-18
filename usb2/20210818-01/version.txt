@@ -1,0 +1,8 @@
+ble_firmware.bin ver : 0.23
+ble_firmware checksum : 232
+
+stm_firmware.bin ver : 0.14
+stm_firmware checksum : 42
+
+net_firmware.bin ver : 0.06
+net_firmware checksum : 51
