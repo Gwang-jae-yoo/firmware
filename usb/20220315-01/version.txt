@@ -7,3 +7,5 @@ netFirmware checksum : 108
 history : ble 38번 채널 활성화
 그외 일산펌웨어와 동일(BLE_3.26/NET_3.44)
 부트로더 포함(재부팅시 행걸리는 현상 수정)
+
+test
